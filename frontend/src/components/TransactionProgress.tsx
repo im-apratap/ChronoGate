@@ -12,7 +12,7 @@ export function TransactionProgress({ step }: { step: 0 | 1 | 2 | 3 }) {
   if (step === 0) return null;
 
   return (
-    <div className="w-full bg-zinc-900/80 backdrop-blur-md rounded-2xl border border-zinc-800 p-6 flex items-center justify-between mt-4">
+    <div className="w-full bg-background backdrop-blur-md rounded-2xl border border-border p-6 flex items-center justify-between mt-4">
       {steps.map((s, idx) => {
         const isActive = step === s.id;
         const isPast = step > s.id;
@@ -25,7 +25,7 @@ export function TransactionProgress({ step }: { step: 0 | 1 | 2 | 3 }) {
                   ? "bg-green-500 border-green-500 text-white"
                   : isActive
                     ? "border-purple-500 text-purple-400 bg-purple-500/10"
-                    : "border-zinc-700 text-zinc-600"
+                    : "border-border text-muted"
               }`}
             >
               {isPast ? (
@@ -41,7 +41,7 @@ export function TransactionProgress({ step }: { step: 0 | 1 | 2 | 3 }) {
             <span
               className={`text-sm font-semibold hidden md:block ${
                 isPast
-                  ? "text-zinc-200"
+                  ? "text-foreground"
                   : isActive
                     ? "text-purple-400"
                     : "text-zinc-600"
@@ -51,7 +51,7 @@ export function TransactionProgress({ step }: { step: 0 | 1 | 2 | 3 }) {
             </span>
             {idx < steps.length - 1 && (
               <div
-                className={`w-4 md:w-16 lg:w-24 h-0.5 ml-3 ${step > idx + 1 ? "bg-green-500" : "bg-zinc-800"}`}
+                className={`w-4 md:w-16 lg:w-24 h-0.5 ml-3 ${step > idx + 1 ? "bg-green-500" : "bg-border"}`}
               />
             )}
           </div>

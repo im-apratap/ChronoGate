@@ -4,12 +4,30 @@
 @theme {
   --font-serif: "Playfair Display", serif;
   --font-sans: "Inter", sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --background: #050505;
+    --foreground: #e5e3dc;
+    --border: #1a1a1a;
+    --muted: #666666;
+    --accent: #ffffff;
+  }
 }
 
 body {
   margin: 0;
-  background-color: #050505;
-  color: #e5e3dc;
+  background-color: var(--background);
+  color: var(--foreground);
   font-family: var(--font-sans);
   min-width: 320px;
   min-height: 100vh;

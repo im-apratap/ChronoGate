@@ -14,7 +14,7 @@ export default function WalletConnectButton() {
             "Please add your Privy App ID to the .env file to enable Wallet connection!",
           )
         }
-        className="px-6 py-2.5 bg-[#E5E3DC] text-black text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-white transition-colors"
+        className="px-6 py-2.5 bg-foreground text-background text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-foreground/90 transition-colors"
       >
         Connect Wallet
       </button>
@@ -37,9 +37,9 @@ function RealWalletConnectButton() {
     return (
       <button
         onClick={logout}
-        className="px-6 py-2.5 border border-[#E5E3DC]/30 text-[#E5E3DC] text-[10px] uppercase tracking-[0.2em] font-semibold hover:bg-[#E5E3DC]/10 transition-colors flex items-center gap-2"
+        className="px-6 py-2.5 border border-foreground/30 text-foreground text-[10px] uppercase tracking-[0.2em] font-semibold hover:bg-foreground/10 transition-colors flex items-center gap-2"
       >
-        <div className="w-1.5 h-1.5 rounded-full bg-[#E5E3DC]/80"></div>
+        <div className="w-1.5 h-1.5 rounded-full bg-foreground/80"></div>
         {shortAddress}
       </button>
     );
@@ -48,7 +48,7 @@ function RealWalletConnectButton() {
   return (
     <button
       onClick={login}
-      className="px-6 py-2.5 bg-[#E5E3DC] text-black text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-white transition-colors"
+      className="px-6 py-2.5 bg-foreground text-background text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-foreground/90 transition-colors"
     >
       Connect Wallet
     </button>

@@ -27,13 +27,13 @@ const MOCK_CREATORS: Creator[] = [
 
 export default function Discover() {
   return (
-    <div className="py-12 animate-in fade-in slide-in-from-bottom-4 duration-500">
+    <div className="py-12 animate-in fade-in slide-in-from-bottom-4 duration-500 text-foreground">
       <div className="flex items-center justify-between mb-10">
         <div>
           <h1 className="text-4xl font-extrabold tracking-tight">
             Discover Creators
           </h1>
-          <p className="text-zinc-400 mt-2 text-lg">
+          <p className="text-muted mt-2 text-lg">
             Find communities, experts, and exclusive insights.
           </p>
         </div>

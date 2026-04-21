@@ -48,7 +48,7 @@ export function AccessStatus({
           >
             {isActive ? "Access Active" : "Access Expired"}
           </h4>
-          <div className="flex items-center gap-2 mt-1 text-zinc-400">
+          <div className="flex items-center gap-2 mt-1 text-muted">
             <Timer size={14} />
             <span className="text-xs font-mono tag tracking-wider">
               {timeLeft}
@@ -60,7 +60,7 @@ export function AccessStatus({
       {!isActive && (
         <button
           onClick={onRenew}
-          className="px-4 py-2 bg-zinc-800 hover:bg-zinc-700 text-white rounded-xl text-sm font-semibold transition-colors"
+          className="px-4 py-2 bg-foreground hover:bg-foreground/80 text-background rounded-xl text-sm font-semibold transition-colors"
         >
           Renew Access
         </button>

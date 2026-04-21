@@ -3,7 +3,7 @@ import { ShieldCheck, Infinity } from "lucide-react";
 
 export default function LandingPage() {
   return (
-    <div className="w-full bg-[#050505] min-h-screen font-sans animate-in fade-in duration-1000">
+    <div className="w-full bg-background min-h-screen font-sans animate-in fade-in duration-1000">
       {/* Hero Section */}
       <div className="relative w-full h-[105vh] overflow-hidden">
         {/* Cinematic Background Image */}
@@ -13,14 +13,14 @@ export default function LandingPage() {
             alt="Cinematic Landscape"
             className="w-full h-full object-cover opacity-60"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-[#050505]"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-[#050505] h-full via-[#050505]/20 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/30 to-background"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-background h-full via-background/20 to-transparent"></div>
         </div>
 
         {/* Hero Content */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 pt-20">
-          <h1 className="text-5xl md:text-7xl font-serif text-white max-w-4xl leading-tight">
-            <span className="italic font-normal text-[#E5E3DC]/90">
+          <h1 className="text-5xl md:text-7xl font-serif text-foreground max-w-4xl leading-tight">
+            <span className="italic font-normal text-foreground/90">
               The ChronoGate Protocol:
             </span>
             <br />
@@ -28,7 +28,7 @@ export default function LandingPage() {
               Monetize Time, Trustlessly.
             </span>
           </h1>
-          <p className="mt-8 text-sm md:text-base text-[#E5E3DC]/70 font-sans max-w-xl font-light tracking-wide leading-relaxed">
+          <p className="mt-8 text-sm md:text-base text-foreground/70 font-sans max-w-xl font-light tracking-wide leading-relaxed">
             Deploy sovereign, time-based access tiers secured entirely on-chain.
             Creators retain absolute ownership, while communities experience
             frictionless entry.
@@ -36,13 +36,13 @@ export default function LandingPage() {
           <div className="flex flex-col sm:flex-row items-center gap-6 mt-12">
             <Link
               to="/discover"
-              className="px-10 py-4 bg-[#E5E3DC] text-black text-[11px] uppercase tracking-[0.2em] font-bold hover:bg-white transition-all shadow-[0_0_20px_rgba(229,227,220,0.15)] w-full sm:w-auto"
+              className="px-10 py-4 bg-foreground text-background text-[11px] uppercase tracking-[0.2em] font-bold hover:bg-white transition-all shadow-[0_0_20px_rgba(229,227,220,0.15)] w-full sm:w-auto"
             >
               Open Directory
             </Link>
             <Link
               to="/creator/register"
-              className="px-10 py-4 border border-[#E5E3DC]/30 text-[#E5E3DC] text-[11px] uppercase tracking-[0.2em] font-semibold hover:bg-[#E5E3DC]/10 transition-colors w-full sm:w-auto"
+              className="px-10 py-4 border border-foreground/30 text-foreground text-[11px] uppercase tracking-[0.2em] font-semibold hover:bg-foreground/10 transition-colors w-full sm:w-auto"
             >
               Become a Creator
             </Link>
@@ -53,28 +53,28 @@ export default function LandingPage() {
       {/* Interface Section */}
       <div className="max-w-6xl mx-auto px-6 pb-32 -mt-20 relative z-20">
         <div className="text-center mb-16">
-          <p className="text-[10px] uppercase tracking-[0.3em] text-[#E5E3DC]/50 mb-4">
+          <p className="text-[10px] uppercase tracking-[0.3em] text-foreground/50 mb-4">
             Interface 01
           </p>
-          <h2 className="text-4xl font-serif text-white italic">
+          <h2 className="text-4xl font-serif text-foreground italic">
             Access Provision
           </h2>
         </div>
 
         <div className="flex flex-col lg:flex-row gap-8 max-w-[1000px] mx-auto">
           {/* Left Panel */}
-          <div className="flex-1 bg-[#09090b] shadow-2xl border border-[#1A1A1A] p-10 hover:border-[#E5E3DC]/20 transition-colors duration-500">
-            <label className="text-[9px] uppercase tracking-[0.2em] text-[#E5E3DC]/50 block mb-3 font-semibold">
+          <div className="flex-1 bg-background shadow-lg shadow-2xl border border-border p-10 hover:border-foreground/20 transition-colors duration-500">
+            <label className="text-[9px] uppercase tracking-[0.2em] text-foreground/50 block mb-3 font-semibold">
               Access Cost (SOL)
             </label>
-            <div className="w-full bg-zinc-950/50 border-b border-zinc-700/50 p-4 text-white font-serif text-2xl flex justify-between items-center mb-8">
-              <span className="text-[#E5E3DC]/90 tracking-wider">1.50</span>
-              <span className="text-[#E5E3DC]/40 text-xs font-sans font-medium tracking-wide">
+            <div className="w-full bg-zinc-950/50 border-b border-zinc-700/50 p-4 text-foreground font-serif text-2xl flex justify-between items-center mb-8">
+              <span className="text-foreground/90 tracking-wider">1.50</span>
+              <span className="text-foreground/40 text-xs font-sans font-medium tracking-wide">
                 SOL
               </span>
             </div>
 
-            <label className="text-[9px] uppercase tracking-[0.2em] text-[#E5E3DC]/50 block mb-4 font-semibold">
+            <label className="text-[9px] uppercase tracking-[0.2em] text-foreground/50 block mb-4 font-semibold">
               Select Subscription Tier
             </label>
             <div className="space-y-3">
@@ -89,19 +89,19 @@ export default function LandingPage() {
               ].map((c, i) => (
                 <div
                   key={i}
-                  className={`flex items-center justify-between p-4 bg-[#0c0c0e] hover:bg-[#121214] border-l-2 ${c.active ? "border-[#E5E3DC]" : "border-transparent"} cursor-pointer transition-all`}
+                  className={`flex items-center justify-between p-4 bg-foreground/5 hover:bg-foreground/10 border-l-2 ${c.active ? "border-foreground" : "border-transparent"} cursor-pointer transition-all`}
                 >
                   <div className="flex items-center gap-4">
                     <div className="w-5 h-5 rounded bg-zinc-800 flex items-center justify-center">
                       <div
-                        className={`w-2 h-2 rounded-full ${c.active ? "bg-[#E5E3DC]" : "bg-zinc-600"}`}
+                        className={`w-2 h-2 rounded-full ${c.active ? "bg-foreground" : "bg-zinc-600"}`}
                       ></div>
                     </div>
-                    <span className="text-sm font-medium text-[#E5E3DC]">
+                    <span className="text-sm font-medium text-foreground">
                       {c.name}
                     </span>
                   </div>
-                  <span className="text-[11px] text-[#E5E3DC]/50 tracking-wider bg-zinc-900 px-2 py-0.5 rounded">
+                  <span className="text-[11px] text-foreground/50 tracking-wider bg-zinc-900 px-2 py-0.5 rounded">
                     {c.dur}
                   </span>
                 </div>
@@ -110,40 +110,40 @@ export default function LandingPage() {
           </div>
 
           {/* Right Panel */}
-          <div className="w-full lg:w-[400px] bg-[#09090b] shadow-2xl border border-[#1A1A1A] p-10 flex flex-col justify-between hover:border-[#E5E3DC]/20 transition-colors duration-500">
+          <div className="w-full lg:w-[400px] bg-background shadow-lg shadow-2xl border border-border p-10 flex flex-col justify-between hover:border-foreground/20 transition-colors duration-500">
             <div>
-              <h3 className="font-serif italic text-2xl text-white mb-8">
+              <h3 className="font-serif italic text-2xl text-foreground mb-8">
                 Execution Summary
               </h3>
-              <div className="space-y-6 text-[13px] text-[#E5E3DC]/60 font-medium">
-                <div className="flex justify-between items-center border-b border-[#1A1A1A] pb-4">
+              <div className="space-y-6 text-[13px] text-foreground/60 font-medium">
+                <div className="flex justify-between items-center border-b border-border pb-4">
                   <span>Creator Share</span>
-                  <span className="text-[#E5E3DC]">95.0%</span>
+                  <span className="text-foreground">95.0%</span>
                 </div>
-                <div className="flex justify-between items-center border-b border-[#1A1A1A] pb-4">
+                <div className="flex justify-between items-center border-b border-border pb-4">
                   <span>Access Window</span>
-                  <span className="text-[#E5E3DC]">30 Days</span>
+                  <span className="text-foreground">30 Days</span>
                 </div>
-                <div className="flex justify-between items-center border-b border-[#1A1A1A] pb-4">
+                <div className="flex justify-between items-center border-b border-border pb-4">
                   <span>Gas Fee</span>
-                  <span className="text-[#E5E3DC]">~0.00001 SOL</span>
+                  <span className="text-foreground">~0.00001 SOL</span>
                 </div>
               </div>
             </div>
 
             <div className="mt-12">
               <div className="flex justify-between items-end mb-8">
-                <span className="text-[9px] uppercase tracking-[0.2em] text-[#E5E3DC]/40">
+                <span className="text-[9px] uppercase tracking-[0.2em] text-foreground/40">
                   Total Requisite
                 </span>
-                <span className="text-3xl font-serif text-white tracking-wide">
+                <span className="text-3xl font-serif text-foreground tracking-wide">
                   1.50
-                  <span className="text-xs text-[#E5E3DC]/40 ml-2 font-sans tracking-widest">
+                  <span className="text-xs text-foreground/40 ml-2 font-sans tracking-widest">
                     SOL
                   </span>
                 </span>
               </div>
-              <button className="w-full py-4 bg-[#E5E3DC] text-black text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-white transition-all shadow-[0_0_15px_rgba(229,227,220,0.1)] hover:shadow-[0_0_25px_rgba(229,227,220,0.3)]">
+              <button className="w-full py-4 bg-foreground text-background text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-white transition-all shadow-[0_0_15px_rgba(229,227,220,0.1)] hover:shadow-[0_0_25px_rgba(229,227,220,0.3)]">
                 Authorize Access
               </button>
             </div>
@@ -154,8 +154,8 @@ export default function LandingPage() {
       {/* Info Section */}
       <div className="max-w-[1000px] mx-auto px-6 py-24 flex flex-col md:flex-row gap-16 md:gap-32 items-center">
         <div className="flex-1">
-          <h2 className="text-4xl md:text-5xl font-serif text-white mb-16 leading-tight">
-            <span className="italic font-normal text-[#E5E3DC]/90">
+          <h2 className="text-4xl md:text-5xl font-serif text-foreground mb-16 leading-tight">
+            <span className="italic font-normal text-foreground/90">
               Sovereign Fluidity.
             </span>
             <br />
@@ -164,15 +164,15 @@ export default function LandingPage() {
           <div className="space-y-12">
             <div className="flex gap-4 group cursor-default">
               <ShieldCheck
-                className="text-[#E5E3DC]/70 group-hover:text-[#E5E3DC] transition-colors flex-shrink-0 mt-1"
+                className="text-foreground/70 group-hover:text-foreground transition-colors flex-shrink-0 mt-1"
                 size={24}
                 strokeWidth={1.5}
               />
               <div>
-                <h4 className="text-base font-bold text-white mb-2 tracking-wide">
+                <h4 className="text-base font-bold text-foreground mb-2 tracking-wide">
                   Immutable Ownership
                 </h4>
-                <p className="text-sm text-[#E5E3DC]/50 leading-relaxed font-light">
+                <p className="text-sm text-foreground/50 leading-relaxed font-light">
                   As a creator, your digital gates are governed by unalterable
                   smart contracts. No human intervention, no arbitrary bans, and
                   no chargeback risks.
@@ -181,15 +181,15 @@ export default function LandingPage() {
             </div>
             <div className="flex gap-4 group cursor-default">
               <Infinity
-                className="text-[#E5E3DC]/70 group-hover:text-[#E5E3DC] transition-colors flex-shrink-0 mt-1"
+                className="text-foreground/70 group-hover:text-foreground transition-colors flex-shrink-0 mt-1"
                 size={24}
                 strokeWidth={1.5}
               />
               <div>
-                <h4 className="text-base font-bold text-white mb-2 tracking-wide">
+                <h4 className="text-base font-bold text-foreground mb-2 tracking-wide">
                   Instant Settlement
                 </h4>
-                <p className="text-sm text-[#E5E3DC]/50 leading-relaxed font-light">
+                <p className="text-sm text-foreground/50 leading-relaxed font-light">
                   Capital flows synchronously with time. The exact moment a user
                   authorizes entry, 95% of the capital is instantly routed to
                   your non-custodial wallet.
@@ -199,19 +199,19 @@ export default function LandingPage() {
           </div>
         </div>
 
-        <div className="flex-1 w-full relative h-[600px] group overflow-hidden border border-[#E5E3DC]/5">
-          <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent z-10 pb-8"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-[#050505] via-transparent to-transparent z-10 pt-8"></div>
+        <div className="flex-1 w-full relative h-[600px] group overflow-hidden border border-foreground/5">
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10 pb-8"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-transparent z-10 pt-8"></div>
           <img
             src="https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=1000&auto=format&fit=crop"
             alt="Forest"
             className="w-full h-full object-cover filter grayscale opacity-70 group-hover:scale-105 transition-transform duration-[20s] ease-out"
           />
           <div className="absolute bottom-12 left-0 right-0 px-8 z-20">
-            <p className="text-[9px] uppercase tracking-[0.3em] text-[#E5E3DC]/50 mb-4">
+            <p className="text-[9px] uppercase tracking-[0.3em] text-foreground/50 mb-4">
               Core Philosophy
             </p>
-            <h3 className="text-2xl font-serif italic text-white leading-snug">
+            <h3 className="text-2xl font-serif italic text-foreground leading-snug">
               "To exist in the digital realm without the constant friction of
               extraction."
             </h3>
@@ -220,7 +220,7 @@ export default function LandingPage() {
       </div>
 
       {/* Metrics Banner */}
-      <div className="w-full bg-[#0A0A0A] border-y border-[#1A1A1A] py-16 mt-10">
+      <div className="w-full bg-background border-y border-border py-16 mt-10">
         <div className="max-w-6xl mx-auto px-6 flex flex-wrap justify-between items-center gap-12">
           {[
             { label: "Total Value Secured (USD)", val: "$12.4M" },
@@ -229,10 +229,10 @@ export default function LandingPage() {
             { label: "Protocol Uptime", val: "99.99%" },
           ].map((stat, i) => (
             <div key={i} className="flex flex-col gap-3">
-              <span className="text-[9px] uppercase tracking-[0.2em] text-[#E5E3DC]/40">
+              <span className="text-[9px] uppercase tracking-[0.2em] text-foreground/40">
                 {stat.label}
               </span>
-              <span className="text-3xl font-serif italic text-white tracking-wide">
+              <span className="text-3xl font-serif italic text-foreground tracking-wide">
                 {stat.val}
               </span>
             </div>
@@ -243,10 +243,10 @@ export default function LandingPage() {
       {/* Protocol Architecture */}
       <div className="max-w-6xl mx-auto px-6 py-32">
         <div className="text-center mb-24">
-          <p className="text-[10px] uppercase tracking-[0.3em] text-[#E5E3DC]/50 mb-4">
+          <p className="text-[10px] uppercase tracking-[0.3em] text-foreground/50 mb-4">
             System Architecture
           </p>
-          <h2 className="text-4xl font-serif text-white italic">
+          <h2 className="text-4xl font-serif text-foreground italic">
             The ChronoGate Mechanics
           </h2>
         </div>
@@ -271,18 +271,18 @@ export default function LandingPage() {
           ].map((item, i) => (
             <div
               key={i}
-              className="p-10 bg-[#09090b] border border-[#1A1A1A] hover:border-[#E5E3DC]/20 transition-all duration-500 group relative overflow-hidden"
+              className="p-10 bg-background shadow-lg border border-border hover:border-foreground/20 transition-all duration-500 group relative overflow-hidden"
             >
-              <div className="absolute top-0 right-0 p-8 text-7xl font-serif italic text-white/5 group-hover:text-white/10 transition-colors pointer-events-none">
+              <div className="absolute top-0 right-0 p-8 text-7xl font-serif italic text-foreground/5 group-hover:text-foreground/10 transition-colors pointer-events-none">
                 {item.step}
               </div>
-              <p className="text-[9px] uppercase tracking-[0.3em] text-[#E5E3DC]/50 mb-8 font-bold relative z-10">
+              <p className="text-[9px] uppercase tracking-[0.3em] text-foreground/50 mb-8 font-bold relative z-10">
                 Phase {item.step}
               </p>
-              <h3 className="text-2xl font-serif text-white mb-4 relative z-10">
+              <h3 className="text-2xl font-serif text-foreground mb-4 relative z-10">
                 {item.title}
               </h3>
-              <p className="text-sm text-[#E5E3DC]/50 leading-relaxed font-light relative z-10">
+              <p className="text-sm text-foreground/50 leading-relaxed font-light relative z-10">
                 {item.desc}
               </p>
             </div>
@@ -291,19 +291,19 @@ export default function LandingPage() {
       </div>
 
       {/* Final CTA */}
-      <div className="w-full relative overflow-hidden py-32 md:py-48 border-t border-[#1A1A1A]">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#050505] to-[#010101] z-0"></div>
+      <div className="w-full relative overflow-hidden py-32 md:py-48 border-t border-border">
+        <div className="absolute inset-0 bg-gradient-to-b from-background to-background z-0"></div>
         <div className="max-w-4xl mx-auto px-6 relative z-10 text-center">
-          <h2 className="text-5xl md:text-7xl font-serif text-white italic mb-10 leading-tight">
+          <h2 className="text-5xl md:text-7xl font-serif text-foreground italic mb-10 leading-tight">
             Ready to transcend <br /> traditional platforms?
           </h2>
-          <p className="text-sm md:text-base text-[#E5E3DC]/50 font-light mb-14 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm md:text-base text-foreground/50 font-light mb-14 max-w-2xl mx-auto leading-relaxed">
             Reclaim your time and capital. Join the next generation of
             protocol-driven creator economies with unprecedented sovereignty.
           </p>
           <Link
             to="/creator/register"
-            className="inline-block px-12 py-5 bg-[#E5E3DC] text-black text-[11px] uppercase tracking-[0.2em] font-bold hover:bg-white transition-all shadow-[0_0_30px_rgba(229,227,220,0.15)] hover:shadow-[0_0_50px_rgba(229,227,220,0.25)]"
+            className="inline-block px-12 py-5 bg-foreground text-background text-[11px] uppercase tracking-[0.2em] font-bold hover:bg-white transition-all shadow-[0_0_30px_rgba(229,227,220,0.15)] hover:shadow-[0_0_50px_rgba(229,227,220,0.25)]"
           >
             Initialize Your First Vault
           </Link>

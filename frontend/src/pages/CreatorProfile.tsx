@@ -61,7 +61,7 @@ export default function CreatorProfile() {
   return (
     <div className="pb-20 animate-in fade-in duration-500">
       {/* Banner */}
-      <div className="h-64 w-full rounded-b-[3rem] overflow-hidden relative">
+      <div className="h-64 w-full rounded-bg-background overflow-hidden relative">
         <img
           src={CREATOR.bannerUrl}
           alt="banner"
@@ -76,39 +76,39 @@ export default function CreatorProfile() {
           <img
             src={CREATOR.imageUrl}
             alt={CREATOR.name}
-            className="w-32 h-32 rounded-3xl border-4 border-[#09090b] bg-zinc-800 object-cover shadow-2xl"
+            className="w-32 h-32 rounded-3xl border-4 border-border bg-zinc-800 object-cover shadow-2xl"
           />
           <div className="flex-1 pb-2">
-            <h1 className="text-4xl font-extrabold text-zinc-100 flex items-center gap-3">
+            <h1 className="text-4xl font-extrabold text-foreground flex items-center gap-3">
               {CREATOR.name}
               {CREATOR.verified && (
                 <BadgeCheck className="text-purple-500" size={28} />
               )}
             </h1>
-            <p className="text-zinc-400 mt-2 text-lg max-w-2xl">
+            <p className="text-muted mt-2 text-lg max-w-2xl">
               {CREATOR.description}
             </p>
           </div>
           <div className="flex items-center gap-3 pb-2">
-            <button className="p-3 bg-zinc-900 border border-zinc-800 rounded-xl hover:bg-zinc-800 transition-colors">
-              <Share2 size={20} className="text-zinc-400" />
+            <button className="p-3 bg-foreground/5 border border-border rounded-xl hover:bg-zinc-800 transition-colors">
+              <Share2 size={20} className="text-muted" />
             </button>
-            <button className="p-3 bg-zinc-900 border border-zinc-800 rounded-xl hover:bg-zinc-800 transition-colors">
-              <LinkIcon size={20} className="text-zinc-400" />
+            <button className="p-3 bg-foreground/5 border border-border rounded-xl hover:bg-zinc-800 transition-colors">
+              <LinkIcon size={20} className="text-muted" />
             </button>
           </div>
         </div>
 
-        <div className="flex items-center gap-6 mt-8 py-6 border-y border-zinc-900">
-          <div className="flex items-center gap-2 text-zinc-300">
+        <div className="flex items-center gap-6 mt-8 py-6 border-y border-border">
+          <div className="flex items-center gap-2 text-foreground">
             <Users size={18} className="text-purple-400" />
             <span className="font-bold text-lg">{CREATOR.subscribers}</span>
-            <span className="text-zinc-500 font-medium">Active Members</span>
+            <span className="text-muted font-medium">Active Members</span>
           </div>
-          <div className="flex items-center gap-2 text-zinc-300">
+          <div className="flex items-center gap-2 text-foreground">
             <Shield size={18} className="text-green-400" />
             <span className="font-bold text-lg">Secured</span>
-            <span className="text-zinc-500 font-medium">by Smart Contract</span>
+            <span className="text-muted font-medium">by Smart Contract</span>
           </div>
         </div>
 
