@@ -1,7 +1,7 @@
 use anchor_lang::prelude::*;
 use anchor_lang::system_program;
 
-declare_id!("11111111111111111111111111111111"); // Will be updated on deploy
+declare_id!("4tmqDaMTiTT7bNTA3csZEtvVftNFpBbRAhSzM49dQsjt"); // Will be updated on deploy
 
 #[program]
 pub mod access_marketplace {
@@ -108,7 +108,7 @@ pub mod access_marketplace {
 
 #[derive(Accounts)]
 pub struct Initialize<'info> {
-    #[account(init, payer = owner, space = 8 + 32 + 32 + 1, seeds = [b"platform"], bump)]
+    #[account(init, payer = owner, space = 8 + 32 + 32 + 1 + 1, seeds = [b"platform"], bump)]
     pub platform_state: Account<'info, PlatformState>,
     /// CHECK: Safe, just receiving funds
     pub platform_wallet: AccountInfo<'info>,
